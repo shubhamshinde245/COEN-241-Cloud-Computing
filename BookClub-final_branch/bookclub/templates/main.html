@@ -1,0 +1,64 @@
+<div class="backg">
+
+{% extends 'base.html' %}
+
+
+{% block title %} Welcome {% endblock %}
+
+
+{% block body %}
+   
+
+        <!-- <h1>Welcome to the Book Club!</h1> -->
+        <div class="buttons">
+       <!-- <button class="btn btn-success signup" data-bs-toggle="modal" data-bs-target="#signup_modal" onclick="{{url_for('register')}}" > -->
+         <!-- <a href="{{url_for('register')}}" > -->
+         <a href="{{ url_for('register') }}" class="btn btn-primary signup">
+            Sign Up
+         </a>
+      <!-- </button> -->
+       <!-- <button class="btn btn-success login" data-bs-toggle="modal" data-bs-target="#login_modal" onclick="{{url_for('login')}}"> -->
+         <!-- <a href="{{url_for('login')}}" > -->
+            <a href="{{ url_for('login') }}" class="btn btn-primary login">
+            Login
+         </a>
+      <!-- </button> -->
+      </div>
+
+
+
+    <style>
+      .backg{
+         background-image: url(/static/homepage.jpeg);
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size:cover; 
+         height: 110%;
+         width: auto;
+      }
+      .signup{
+         margin-top: 450px;
+         margin-right: 40px;
+         background-color: white; 
+         color: black; 
+         border: 5px solid #2e6f30;
+         text-decoration: none;
+      }
+      .login{
+         margin-top: 450px;
+         background-color: white; 
+         color: black; 
+         border: 5px solid #2e6f30;
+         text-decoration: none;
+      }
+      .login.signup{
+         display: inline-block;
+         
+      }
+      .buttons{
+         text-align: center;
+      }
+      
+   </style>
+   {% endblock %}
+   </div>
